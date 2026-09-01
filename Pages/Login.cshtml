@@ -1,0 +1,163 @@
+﻿@page
+@model E_commerce.Pages.LoginModel
+@{
+
+// the title of the page is set to "Login" in the ViewData dictionary,
+// which can be used in the layout or other parts of the page to display
+//  title dynamically.
+ViewData["Title"] = "Login";
+}
+
+
+
+<div class="container-fluid p-0">
+
+    <header class="header-bg ">
+        <div class="container py-3">
+            <div class="row align-items-center">
+
+          
+                <div class="col-lg-3">
+                    <h2 class="logo mb-0">
+                        <a href="/">Bike E-commerce</a>
+                    </h2>
+                </div>
+                <div class="col-lg-7 text-end">
+                    <a asp-page="/Login" class="btn btn-outline-dark me-2">
+                        Login
+                    </a>
+                    <a href="#" class="btn btn-warning">
+                         Cart
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <aside class="col-lg-2 sidebar">
+
+                <h4 class="mt-4 mb-3">Categories</h4>
+
+                <div class="list-group">
+
+                    <a href="#" class="list-group-item list-group-item-action">Mountain bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Road bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Electric bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kids bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">City bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Accessories</a>
+                    <a href="#" class="list-group-item list-group-item-action">Clothing</a>
+
+                </div>
+
+            </aside>
+            <main class="col-lg-10 d-flex justify-content-center align-items-center login-page mt-2">
+
+                <div class="login-card">
+
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Welcome Back</h2>
+                        <p class="text-muted">
+                            Sign in to continue shopping.
+                        </p>
+                    </div>
+
+                    <form method="post">
+
+                        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+
+                            <label asp-for="Username" class="form-label fw-semibold"></label>
+
+                            <div class="input-icon">
+
+                                <img src="~/img/username1.png"
+                                     class="login-icon"
+                                     alt="Username" />
+
+                                <input asp-for="Username"
+                                       class="form-control login-input"
+                                       placeholder="Enter your username" />
+
+                            </div>
+
+                            <span asp-validation-for="Username" class="text-danger"></span>
+
+                        </div>
+
+          
+                        <div class="mb-3">
+
+                            <label asp-for="Password" class="form-label fw-semibold"></label>
+
+                            <div class="input-icon">
+
+                                <img src="~/img/password1.png"
+                                     class="login-icon"
+                                     alt="Password" />
+
+                                <input asp-for="Password"
+                                       id="password"
+                                       type="password"
+                                       class="form-control login-input"
+                                       placeholder="Enter your password" />
+
+                            </div>
+
+                            <span asp-validation-for="Password" class="text-danger"></span>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <div class="d-flex align-items-center">
+
+                                <img src="~/img/show1.png"
+                                     class="show-icon me-2"
+                                     alt="Show Password" />
+
+                                <input class="form-check-input me-2"
+                                       type="checkbox"
+                                       id="showPassword" />
+
+                                <label class="form-check-label"
+                                       for="showPassword">
+                                    Show password
+                                </label>
+
+                            </div>
+
+                            <a href="#" class="small">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-warning login-btn">
+                            Log In
+                        </button>
+
+                        <hr>
+
+                        <p class="text-center mb-0">
+                            Don't have an account?
+                            <a asp-page="/Users/Register">
+                                Create one
+                            </a>
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+</div>

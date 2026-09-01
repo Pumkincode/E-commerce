@@ -1,0 +1,101 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body {
+    background-color: #fff3cd;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+
+.header-bg {
+    background-color: #fffbea;
+}
+
+main {
+}
+
+.login-input {
+    width: 280px;
+    display: inline-block;
+}
+
+
+.form-group img {
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.login-card {
+    max-width: 450px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.input-icon {
+    position: relative;
+}
+
+.login-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    z-index: 10;
+}
+
+.show-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.login-input {
+    height: 50px;
+    border-radius: 12px;
+    padding-left: 55px;
+}
+
+.login-btn {
+    width: 100%;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 12px;
+}

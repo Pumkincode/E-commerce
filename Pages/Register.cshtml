@@ -1,0 +1,57 @@
+﻿@page
+@model E_commerce.Pages.Shared.RegisterModel
+@{
+
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="container-fluid p-0">
+
+    <header class="header-bg ">
+        <div class="container py-3">
+            <div class="row align-items-center">
+
+          
+                <div class="col-lg-3">
+                    <h2 class="logo mb-0">
+                        <a href="/"> Bike E-commerce</a>
+                    </h2>
+                </div>
+                <div class="col-lg-7 text-end">
+                    <a asp-page="/Login" class="btn btn-outline-dark me-2">
+                        Login
+                    </a>
+                    <a href="#" class="btn btn-warning">
+                         Cart
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <aside class="col-lg-2 sidebar">
+
+                <h4 class="mt-4 mb-3">Categories</h4>
+
+                <div class="list-group">
+
+                    <a href="#" class="list-group-item list-group-item-action">Mountain bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Road bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Electric bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kids bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">City bikes</a>
+                    <a href="#" class="list-group-item list-group-item-action">Accessories</a>
+                    <a href="#" class="list-group-item list-group-item-action">Clothing</a>
+
+                </div>
+
+            </aside>
+        </div>
+    </div>
+</div>
