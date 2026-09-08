@@ -1,0 +1,18 @@
+﻿body {
+   background-color: #FFFBEA;
+   
+}
+.grid {
+    display: grid;
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.secondary-heading {
+   color: #D1D954;
+   padding: 24px;
+  
+}

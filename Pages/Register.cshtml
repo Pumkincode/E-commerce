@@ -8,50 +8,138 @@
 
 <div class="container-fluid p-0">
 
-    <header class="header-bg ">
-        <div class="container py-3">
-            <div class="row align-items-center">
+    <!-- HEADER -->
+    <header class="header-section">
+        <div class="header">
 
-          
-                <div class="col-lg-3">
-                    <h2 class="logo mb-0">
-                        <a href="/"> Bike E-commerce</a>
-                    </h2>
-                </div>
-                <div class="col-lg-7 text-end">
-                    <a asp-page="/Login" class="btn btn-outline-dark me-2">
-                        Login
-                    </a>
-                    <a href="#" class="btn btn-warning">
-                         Cart
-                    </a>
+            <a asp-page="/Index" class="logo">
+                AgriHub
+            </a>
 
-                </div>
+            <div class="header-actions">
+
+                <a asp-page="/Login" class="btn login-btn">
+                    Login
+                </a>
+
+                <a href="#" class="cart-btn">
+                    Cart
+                </a>
 
             </div>
         </div>
     </header>
 
-    <div class="container-fluid">
-        <div class="row">
 
-            <aside class="col-lg-2 sidebar">
+    <!-- MAIN -->
+    <main>
 
-                <h4 class="mt-4 mb-3">Categories</h4>
+        <section class="register-section">
 
-                <div class="list-group">
+            <h2 class="fw-bold">
+                Create Your AgriHub Account
+            </h2>
 
-                    <a href="#" class="list-group-item list-group-item-action">Mountain bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Road bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Electric bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kids bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">City bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Accessories</a>
-                    <a href="#" class="list-group-item list-group-item-action">Clothing</a>
+            <p class="text-muted">
+                Register to start shopping with AgriHub.
+            </p>
+
+
+            <!-- REGISTER FORM -->
+            <form method="post">
+
+                <!-- USERNAME -->
+                <div class="form-group mb-3">
+
+                    <label asp-for="Input.Username"
+                           class="form-label fw-semibold">
+                    </label>
+
+                    <input asp-for="Input.Username"
+                           class="form-control"
+                           placeholder="Enter your username" />
+
+                    <span asp-validation-for="Input.Username"
+                          class="text-danger">
+                    </span>
 
                 </div>
 
-            </aside>
-        </div>
-    </div>
+
+                <!-- EMAIL -->
+                <div class="form-group mb-3">
+
+                    <label asp-for="Input.Email"
+                           class="form-label fw-semibold">
+                    </label>
+
+                    <input asp-for="Input.Email"
+                           class="form-control"
+                           placeholder="Enter your email" />
+
+                    <span asp-validation-for="Input.Email"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group mb-4">
+
+                    <label asp-for="Input.Password"
+                           class="form-label fw-semibold">
+                    </label>
+
+                    <input asp-for="Input.Password"
+                           class="form-control"
+                           placeholder="Create a password" />
+
+                    <span asp-validation-for="Input.Password"
+                          class="text-danger">
+                    </span>
+
+                </div>
+                <div class="form-check mb-3">
+
+
+                    <input class="form-check-input me-2"
+                           type="checkbox"
+                           id="showPassword" />
+
+                    <label class="form-check-label"
+                           for="showPassword">
+                        Show password
+                    </label>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button type="submit"
+                        class="registerbtn">
+                    Create Account
+                </button>
+
+                <hr />
+
+            </form>
+
+        </section>
+
+    </main>
+
 </div>
+<script>
+    document.getElementById("showPassword").addEventListener("change", function() {
+        const password = document.getElementById("Password");
+
+        password.type = this.checked ? "text" : "password";
+    });
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

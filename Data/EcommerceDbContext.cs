@@ -15,7 +15,7 @@ namespace E_commerce.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductReview> ProductReviews { get; set; }
-        public DbSet<Role> Roles { get; set; }
+ 
         public DbSet<Subcategory> Subcategories { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Wishlist> Wishlist { get; set; }
@@ -105,12 +105,7 @@ namespace E_commerce.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
 
-            // Role -> Users
-            modelBuilder.Entity<User>()
-                .HasOne(u => u.Role)
-                .WithMany(r => r.Users)
-                .HasForeignKey(u => u.RoleId)
-                .OnDelete(DeleteBehavior.Restrict);
+ 
 
 
             // User -> Orders

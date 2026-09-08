@@ -4,113 +4,91 @@
     ViewData["Title"] = "Home page";
 }
 
-
-
 <div class="container-fluid p-0">
 
-    <header class="header-bg ">
-        <div class="container py-3">
-            <div class="row align-items-center">
-
-          
-                <div class="col-lg-3">
-                    <h2 class="logo mb-0">
-                        <a href="/"> Bike E-commerce</a>
-                    </h2>
-                </div>
-
-                
-              
-
-                <div class="col-lg-8 text-end">
-                    <a asp-page="/Login" class="btn btn-outline-dark me-2">
-                        Login
-                    </a>
-
-                 
-
-                    <a href="#" class="btn btn-warning">
-                        Cart
-                    </a>
-
-                </div>
-
+    <!-- HEADER -->
+    <header class="header-section">
+        <div class="header">
+            <a href="/" class="logo">AgriHub</a>
+            <div class="header-actions">
+                <a asp-page="/Login" class="btn  login-btn">
+                    Login
+                </a>
+                <a href="#" class="cart-btn">
+                    Cart
+                </a>
             </div>
         </div>
     </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Grow Better. Farm Smarter.</h1>
+                <p>Your trusted agriculture marketplace.</p>
+                <a asp-page="/Produtcs" class="btn  produtcs-btn">
+                   Shop Produtcs
+                </a>
+                <a href="#farmsolution" class="solution-btn">
+                    Farm Solutions
+                </a>
+            </div>
+            <div class="hero-img-box">
+                <img src="~/img/hero.jpg" class="hero-img" alt="vegetables" />
+            </div>
+        </section>
 
-    <div class="container-fluid">
-        <div class="row">
+        <section class="featured-section">
 
-            <aside class="col-lg-2 sidebar">
-
-                <h4 class="mt-4 mb-3">Categories</h4>
-
-                <div class="list-group">
-
-                    <a href="#" class="list-group-item list-group-item-action">Mountain bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Road bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Electric bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kids bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">City bikes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Accessories</a>
-                    <a href="#" class="list-group-item list-group-item-action">Clothing</a>
-
+            <div class="text">
+                <!-- PRODUCTS -->
+                <h2 class="secondary-heading">
+                    Featured  Products
+                </h2>
+            </div>
+            
+                <div class="featured">
+                   
+                    <div class="featured-content">
+                      
+                    </div>
+                    <h3 class="tertiary-heading">56$</h3>
+                    <button class ="productbtn">View product</button>
                 </div>
 
-            </aside>
-
-        
-            <main class="col-lg-10 py-4">
-
-                <h2 class="mb-4">Featured Bikes</h2>
-
-                <div class="row g-4">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-sm">
-                            <img src="~/images/bike1.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4>Mountain Bike</h4>
-                                <h5 class="text-success">$899</h5>
-                                <button class="btn btn-primary w-100">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
+                <div class="featured">
+                    <div class="featured-content">
+                       
+                        
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-sm">
-                            <img src="~/images/bike2.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4>Road Bike</h4>
-                                <h5 class="text-success">$1299</h5>
-                                <button class="btn btn-primary w-100">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 shadow-sm">
-                            <img src="~/images/bike3.jpg" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h4>Electric Bike</h4>
-                                <h5 class="text-success">$2499</h5>
-                                <button class="btn btn-primary w-100">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
+                    <h3 class="tertiary-heading">56$</h3>
+                    <button class ="productbtn">View product</button>
                 </div>
 
-            </main>
+                <div class="featured">
+                 
+                    <div class="featured-content">
+                       
+                    </div>
+                    <h3 class="tertiary-heading">56$</h3>
+                    <button class="productbtn">View product</button>
+                </div>
 
-        </div>
-    </div>
 
+                <div class="featured">
+                   
+                    <div class="featured-content">
+                        
+                         
+                    <h3 class="tertiary-heading">56$</h3>
+                    <button class="productbtn">View product</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
 </div>
+
+    
+
+
+
